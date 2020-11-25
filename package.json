@@ -3,9 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "Boilerplate for Create-React-App with an Express.js API",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "postinstall": "cd client && npm install",
+    "postinstall": "cd client && npm install && cd ../server && npm install",
     "build": "cd client && npm run build && npm run build-storybook",
     "test:watch": "cd client && npm run test:watch",
     "test": "npm run lint && npm run prettier && cd client && npm test",
@@ -14,9 +14,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "cd client && npm start",
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,html,css,json}\"",
-    "server": "nodemon server.js",
+    "server": "nodemon server/server.js",
     "storybook": "cd client && npm run storybook",
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,6 @@
     "url": "https://github.com/lmachens/cra-with-api/issues"
   },
   "homepage": "https://github.com/lmachens/cra-with-api#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
