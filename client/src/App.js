@@ -1,8 +1,13 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
+import Characters from './pages/Characters';
 
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <div className="App">
+      <Characters />
+    </div>
+  );
 }
 
 export default App;
